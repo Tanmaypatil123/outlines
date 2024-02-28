@@ -128,7 +128,7 @@ class TransformerTokenizer(Tokenizer):
         kwargs.setdefault("padding_side", "left")
         # TODO: Do something to make this hashable?
         self.kwargs = kwargs
-        self.tokenize = tokenizer
+        self.tokenizer = tokenizer
         self.eos_token_id = self.tokenizer.eos_token_id
         self.eos_token = self.tokenizer.eos_token
 
