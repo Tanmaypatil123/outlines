@@ -95,7 +95,9 @@ class Transformer:
 
         if past_key_values:
             input_ids = input_ids[..., -1].unsqueeze(-1)
-
+        print(f"input_ds : {input_ids}")
+        print(f"attention_mask : {attention_mask}")
+        print(f"past_key_values : {past_key_values}")
         output = self.model(
             input_ids,
             attention_mask=attention_mask,
