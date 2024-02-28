@@ -104,6 +104,7 @@ class Transformer:
             output_hidden_states=False,
             past_key_values=past_key_values,
         )
+        print(output)
 
         return output.logits, output.past_key_values
 
